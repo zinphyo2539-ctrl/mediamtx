@@ -149,10 +149,17 @@ components:
           type: array
           items:
             type: string
-        webrtcICEServers:
+        webrtcICEServers2:
           type: array
           items:
-            type: string
+            type: object
+            properties:
+              url:
+                type: string
+              username:
+                type: string
+              password:
+                type: string
         webrtcICEHostNAT1To1IPs:
           type: array
           items:
@@ -666,6 +673,8 @@ paths:
                 $ref: '#/components/schemas/HLSMuxer'
         '400':
           description: invalid request.
+        '404':
+          description: muxer not found.
         '500':
           description: internal server error.
 
@@ -720,6 +729,8 @@ paths:
                 $ref: '#/components/schemas/Path'
         '400':
           description: invalid request.
+        '404':
+          description: path not found.
         '500':
           description: internal server error.
 
@@ -774,6 +785,8 @@ paths:
                 $ref: '#/components/schemas/RTSPConn'
         '400':
           description: invalid request.
+        '404':
+          description: connection not found.
         '500':
           description: internal server error.
 
@@ -828,6 +841,8 @@ paths:
                 $ref: '#/components/schemas/RTSPSession'
         '400':
           description: invalid request.
+        '404':
+          description: session not found.
         '500':
           description: internal server error.
 
@@ -848,6 +863,8 @@ paths:
           description: the request was successful.
         '400':
           description: invalid request.
+        '404':
+          description: session not found.
         '500':
           description: internal server error.
 
@@ -902,6 +919,8 @@ paths:
                 $ref: '#/components/schemas/RTSPConn'
         '400':
           description: invalid request.
+        '404':
+          description: connection not found.
         '500':
           description: internal server error.
 
@@ -932,6 +951,8 @@ paths:
                 $ref: '#/components/schemas/RTSPSessionsList'
         '400':
           description: invalid request.
+        '404':
+          description: session not found.
         '500':
           description: internal server error.
 
@@ -956,6 +977,8 @@ paths:
                 $ref: '#/components/schemas/RTSPSession'
         '400':
           description: invalid request.
+        '404':
+          description: session not found.
         '500':
           description: internal server error.
 
@@ -976,6 +999,8 @@ paths:
           description: the request was successful.
         '400':
           description: invalid request.
+        '404':
+          description: session not found.
         '500':
           description: internal server error.
 
@@ -1030,6 +1055,8 @@ paths:
                 $ref: '#/components/schemas/RTMPConn'
         '400':
           description: invalid request.
+        '404':
+          description: connection not found.
         '500':
           description: internal server error.
 
@@ -1050,6 +1077,8 @@ paths:
           description: the request was successful.
         '400':
           description: invalid request.
+        '404':
+          description: session not found.
         '500':
           description: internal server error.
 
@@ -1104,6 +1133,8 @@ paths:
                 $ref: '#/components/schemas/RTMPConn'
         '400':
           description: invalid request.
+        '404':
+          description: connection not found.
         '500':
           description: internal server error.
 
@@ -1124,6 +1155,8 @@ paths:
           description: the request was successful.
         '400':
           description: invalid request.
+        '404':
+          description: session not found.
         '500':
           description: internal server error.
 
@@ -1178,6 +1211,8 @@ paths:
                 $ref: '#/components/schemas/WebRTCSession'
         '400':
           description: invalid request.
+        '404':
+          description: session not found.
         '500':
           description: internal server error.
 
@@ -1198,5 +1233,7 @@ paths:
           description: the request was successful.
         '400':
           description: invalid request.
+        '404':
+          description: session not found.
         '500':
           description: internal server error.
