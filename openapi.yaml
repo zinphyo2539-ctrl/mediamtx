@@ -264,6 +264,8 @@ components:
           type: number
         rpiCameraROI:
           type: string
+        rpiCameraHDR:
+          type: boolean
         rpiCameraTuningFile:
           type: string
         rpiCameraMode:
@@ -328,6 +330,12 @@ components:
           $ref: '#/components/schemas/PathSourceOrReader'
         sourceReady:
           type: boolean
+          description: deprecated, replaced by 'ready'
+        ready:
+          type: boolean
+        readyTime:
+          type: string
+          nullable: true
         tracks:
           type: array
           items:
@@ -349,7 +357,7 @@ components:
           - hlsMuxer
           - hlsSource
           - rpiCameraSource
-          - rtmpSession
+          - rtmpConn
           - rtmpSource
           - rtmpsSession
           - rtspSession
@@ -389,6 +397,8 @@ components:
         state:
           type: string
           enum: [idle, read, publish]
+        path:
+          type: string
         bytesReceived:
           type: integer
           format: int64
@@ -408,6 +418,8 @@ components:
         state:
           type: string
           enum: [idle, read, publish]
+        path:
+          type: string
         bytesReceived:
           type: integer
           format: int64
@@ -496,6 +508,8 @@ components:
         state:
           type: string
           enum: [read, publish]
+        path:
+          type: string
         bytesReceived:
           type: integer
           format: int64
@@ -599,6 +613,8 @@ paths:
           description: the request was successful.
         '400':
           description: invalid request.
+        '404':
+          description: configuration not found.
         '500':
           description: internal server error.
 
@@ -619,6 +635,8 @@ paths:
           description: the request was successful.
         '400':
           description: invalid request.
+        '404':
+          description: configuration not found.
         '500':
           description: internal server error.
 
