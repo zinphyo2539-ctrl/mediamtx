@@ -733,7 +733,12 @@ pathDefaults:
 paths:
   # example:
   # my_camera:2539
-  #   source: rtsp://zinphyo2539:2539zinphyo@192.168.99.205:554/stream2
+  #   source: paths:
+  zinphyo-cam:
+    source: rtsp://zinphyo2539:2539zinphyo@192.168.99.205:554/stream2
+    sourceProtocol: rtsp
+    sourceOnDemand: yes
+39:2539zinphyo@192.168.99.205:554/stream2
 
   # Settings under path "all_others" are applied to all paths that
   # do not match another entry.
