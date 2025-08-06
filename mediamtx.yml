@@ -737,4 +737,21 @@ paths:
 
   # Settings under path "all_others" are applied to all paths that
   # do not match another entry.
-  all_others:
+  all_others:paths:
+  zinphyo-cam:
+    source: rtsp://zinphyo2539:2539zinphyo@192.168.99.205:554/stream2
+    sourceProtocol: rtsp
+    sourceOnDemand: yes
+version: '3'
+
+services:
+  mediamtx:
+    image: bluenviron/mediamtx
+    ports:
+      - 1935:1935
+      - 8554:8554
+      - 8888:8888
+      - 8889:8889
+      - 8890:8890
+    volumes:
+      - ./mediamtx.yml:/mediamtx.yml
