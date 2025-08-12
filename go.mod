@@ -10,8 +10,8 @@ require (
 	github.com/alecthomas/kong v1.12.1
 	github.com/asticode/go-astits v1.13.0
 	github.com/bluenviron/gohlslib/v2 v2.2.2
-	github.com/bluenviron/gortsplib/v4 v4.16.0
-	github.com/bluenviron/mediacommon/v2 v2.4.0
+	github.com/bluenviron/gortsplib/v4 v4.16.1
+	github.com/bluenviron/mediacommon/v2 v2.4.1
 	github.com/datarhei/gosrt v0.9.0
 	github.com/fsnotify/fsnotify v1.9.0
 	github.com/gin-contrib/pprof v1.5.3
@@ -23,7 +23,7 @@ require (
 	github.com/gookit/color v1.5.4
 	github.com/gorilla/websocket v1.5.3
 	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51
-	github.com/matthewhartstonge/argon2 v1.3.3
+	github.com/matthewhartstonge/argon2 v1.3.4
 	github.com/pion/ice/v4 v4.0.7
 	github.com/pion/interceptor v0.1.40
 	github.com/pion/logging v0.2.4
@@ -32,9 +32,9 @@ require (
 	github.com/pion/sdp/v3 v3.0.15
 	github.com/pion/webrtc/v4 v4.0.7
 	github.com/stretchr/testify v1.10.0
-	golang.org/x/crypto v0.40.0
-	golang.org/x/sys v0.34.0
-	golang.org/x/term v0.33.0
+	golang.org/x/crypto v0.41.0
+	golang.org/x/sys v0.35.0
+	golang.org/x/term v0.34.0
 	gopkg.in/yaml.v2 v2.4.0
 )
 
@@ -87,8 +87,8 @@ require (
 	github.com/xanzy/ssh-agent v0.3.3 // indirect
 	github.com/xo/terminfo v0.0.0-20210125001918-ca9a967f8778 // indirect
 	golang.org/x/arch v0.16.0 // indirect
-	golang.org/x/net v0.42.0 // indirect
-	golang.org/x/text v0.27.0 // indirect
+	golang.org/x/net v0.43.0 // indirect
+	golang.org/x/text v0.28.0 // indirect
 	golang.org/x/time v0.9.0 // indirect
 	google.golang.org/protobuf v1.36.6 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
