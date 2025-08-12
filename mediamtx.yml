@@ -772,3 +772,20 @@ paths:
   # Settings under path "all_others" are applied to all paths that
   # do not match another entry.
   all_others:
+server:
+  readTimeout: 10s
+  writeTimeout: 10s
+
+hls:
+  directory: ./hls
+  segmentCount: 3
+  segmentDuration: 4s
+  allowOrigin: "*"
+  enable: yes
+
+paths:
+  mycctv:
+    source: rtsp://zinphyo2539:2539zinphyo@192.168.99.205:554/stream1
+    runOnPublish:
+      restart: yes
+    
